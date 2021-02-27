@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>World News</title>
+  </head>
+  <body>
+    <header>
+      <nav class="filterNav">
+        <i class="fas fa-arrow-left"></i>
+        <img src="./images/filter.png" class="filter" alt="filter" />
+      </nav>
+    </header>
+    <main class="newsMain">
+      <div class="background_mountain backImg">
+        <h1>World news</h1>
+        <div class="empty"></div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipi elit. Excepturi, quo.
+        </p>
+        <img src="./images/avatar (man).png" alt="man avatar" class="avatar" />
+      </div>
+      <form>
+        <label for="date"><b>Select a date</b></label>
+        <select
+          class="input"
+          id="date"
+          name="datelist"
+          form="dateform"
+          required
+        >
+          <option value="" disabled selected>select</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+        </select>
+        <label for="keywords"><b>Enter the first keywords</b></label>
+        <input type="text" id="keywords" class="input" />
+        <button class="btn">Search</button>
+      </form>
+      <article class="article">
+        <hr class="line" />
+        <img src="./images/avatar (man).png" alt="man avatar" class="avatar" />
+        <h2>Phasellus ipsum dolor sit amet</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos atque
+          expedita unde consequatur dolorem debitis reiciendis animi, quae
+          fugiat quia vel voluptatibus beatae ducimus exercitationem ipsa neque
+          eligendi inventore! Ducimus, doloribus quis totam beatae atque ad
+          repellat deserunt fugit autem minus facilis
+        </p>
+        <p>
+          delectus possimus aut iusto commodi. epellat deserunt fugit autem
+          minus facilis laudantium in velit, delectus possimus aut iusto
+          commodi.
+        </p>
+        <i class="far fa-clock"> 2m ago</i>
+        <hr class="line" />
+        <img src="./images/happening/elephant.png" alt="An elephant" />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
+          magnam quos eveniet ut rerum dignissimos nam maxime culpa totam
+          similique facilis accusantium dolorem obcaecati doloribus delectus
+          accusamus quisquam vitae commodi, omnis quae. Qui obcaecati et quam
+          eaque molestias nulla ea neque, officiis ducimus? Nihil perspiciatis
+          pariatur dolorem natus reiciendis excepturi. Ipsum officia recusandae
+          laborum officiis assumenda! Fugiat eius rem quisquam facilis quam nam
+          similique laudantium, adipisci expedita veritatis omnis delectus.
+        </p>
+        <p class="conclusion">
+          <em>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident,
+            expedita.
+          </em>
+        </p>
+        <hr class="line" />
+      </article>
+      <footer id="footer">
+        <nav>
+          <ul class="footerUl">
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+            <li>05</li>
+            <li><b>...</b></li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

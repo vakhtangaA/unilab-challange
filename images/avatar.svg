@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { stroke: #ffffff;stroke-width: 2 } 
+	</style>
+	<g id="Mobile 3">
+		<g id="hero">
+			<g id="image card">
+				<g id="Title">
+					<path id="avatar" class="shp0" d="M20 40C8.94 40 0 31.06 0 20C0 8.94 8.94 0 20 0C31.06 0 40 8.94 40 20C40 31.06 31.06 40 20 40Z" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

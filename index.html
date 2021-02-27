@@ -16,7 +16,15 @@
   </head>
   <body>
     <header>
-      <nav><i class="fas fa-bars"></i></nav>
+      <nav>
+        <i class="fas fa-bars desktop_hidden"></i>
+        <ul class="mobile_hidden nav_list">
+          <a href=""><li>Home</li></a>
+          <li>Discovery</li>
+          <li>Photos</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
       <span>Logo</span>
       <img src="./images/avatar.png" alt="avatar" />
     </header>
@@ -32,7 +40,7 @@
       </div>
       <section class="topics_section">
         <div class="section_header">
-          <h2>More</h2>
+          <h2>More news</h2>
 
           <div class="arrows">
             <i style="font-size: 24px" class="fa">&#xf104;</i>
@@ -40,22 +48,25 @@
           </div>
         </div>
         <hr class="line" />
-        <div class="article_header">
-          <h3 class="sub_topic">Travel</h3>
-          <h4>Article title</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            fugit
-          </p>
-          <i class="far fa-clock"> 2m ago</i>
-        </div>
-        <div class="article_header">
-          <h3 class="sub_topic">Technology</h3>
-          <h4>Article title</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, sunt!
-          </p>
-          <i class="far fa-clock"> 1h ago</i>
+        <div id="flexOnDesktop">
+          <div class="article_header">
+            <h3 class="sub_topic">Travel</h3>
+            <h4>Article title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              fugit
+            </p>
+            <i class="far fa-clock"> 2m ago</i>
+          </div>
+          <div class="article_header">
+            <h3 class="sub_topic">Technology</h3>
+            <h4>Article title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+              sunt!
+            </p>
+            <i class="far fa-clock"> 1h ago</i>
+          </div>
         </div>
       </section>
       <section class="trending_section">
@@ -67,29 +78,31 @@
             <i style="font-size: 24px" class="fa">&#xf105;</i>
           </div>
         </div>
-        <div class="article_header">
-          <img
-            src="./images/trending/lake.png"
-            alt="A beautiful landscape with the lake"
-          />
-          <div class="article_descriptor">
-            <h3>Dolore magna aliqua</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Provident, repellat.
-            </p>
-            <i class="far fa-clock"> 2m ago</i>
+        <div class="trendingFlex">
+          <div class="article_header">
+            <img
+              src="./images/trending/lake.png"
+              alt="A beautiful landscape with the lake"
+            />
+            <div class="article_descriptor">
+              <h3>Dolore magna aliqua</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident, repellat.
+              </p>
+              <i class="far fa-clock"> 2m ago</i>
+            </div>
           </div>
-        </div>
-        <div class="article_header">
-          <img src="./images/trending/umbrella.png" alt="Orange umbrellas" />
-          <div class="article_descriptor">
-            <h3>Morbi eleifend a libero</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia,
-              labore?
-            </p>
-            <i class="far fa-clock"> 1h ago</i>
+          <div class="article_header">
+            <img src="./images/trending/umbrella.png" alt="Orange umbrellas" />
+            <div class="article_descriptor">
+              <h3>Morbi eleifend a libero</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia,
+                labore?
+              </p>
+              <i class="far fa-clock"> 1h ago</i>
+            </div>
           </div>
         </div>
       </section>
@@ -104,42 +117,48 @@
         </div>
         <div class="background_city backImg">
           <h2>City</h2>
-          <h3>Large article title mobile layout</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus,
-            culpa.
-          </p>
-          <i class="far fa-clock"> 1h ago</i>
+          <div>
+            <h3>Large article title</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus,
+              culpa.
+            </p>
+            <i class="far fa-clock"> 1h ago</i>
+          </div>
         </div>
         <div class="background_forest backImg">
           <h2>Travel</h2>
-          <h3>Large article title mobile layout</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-            nihil.
-          </p>
-          <i class="far fa-clock"> 1h ago</i>
+          <div>
+            <h3>Large article title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Obcaecati, nihil.
+            </p>
+            <i class="far fa-clock"> 1h ago</i>
+          </div>
         </div>
         <hr class="line" />
-        <div id="small_title">
-          <img
-            src="./images/happening/elephant.png"
-            alt="A elephant with sand"
-          />
-          <h3>Small title</h3>
-          <i class="far fa-clock"> 3h ago by</i
-          ><a class="image_author" href="">Worldnews</a>
+        <div class="trendingFlex">
+          <div class="small_title">
+            <img
+              src="./images/happening/elephant.png"
+              alt="A elephant with sand"
+            />
+            <h3>Small title</h3>
+            <i class="far fa-clock"> 3h ago by</i
+            ><a class="image_author" href="">Worldnews</a>
+          </div>
+          <div class="small_title">
+            <img
+              src="./images/happening/tree.png"
+              alt="A big parrot with trees"
+            />
+            <h3>Small title</h3>
+            <i class="far fa-clock"> 4h ago by</i
+            ><a class="image_author" href="">Days</a>
+          </div>
         </div>
-        <div id="small_title">
-          <img
-            src="./images/happening/tree.png"
-            alt="A big parrot with trees"
-          />
-          <h3>Small title</h3>
-          <i class="far fa-clock"> 4h ago by</i
-          ><a class="image_author" href="">Days</a>
-        </div>
-        <div id="small_title">
+        <div class="desktop_hidden small_title">
           <img src="./images/happening/road.png" alt="Road" />
           <h3>Small title</h3>
           <i class="far fa-clock"> 3h ago by</i
@@ -147,6 +166,49 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="mobile_hidden dskt_footer">
+      <div class="topFooter">
+        <span>Logo</span>
+        <nav class="bigNav">
+          <ul>
+            <a href=""><li>Home</li></a>
+            <li>Discovery</li>
+            <li>Photos</li>
+            <li>Contact</li>
+          </ul>
+          <ul>
+            <li>About</li>
+            <li>Help</li>
+            <li>Terms</li>
+            <li>Guidelines</li>
+          </ul>
+          <ul>
+            <li>Testimonials</li>
+            <li>Advertise</li>
+            <li>Integrations</li>
+            <li>Careers</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bottomFooter">
+        <div>
+          <input
+            type="email"
+            id="email"
+            class="footer_input"
+            placeholder="Email"
+          />
+          <label for="email"
+            >Stay in touch with us for the freshest products!</label
+          >
+        </div>
+        <div>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fas fa-globe-europe"></i>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

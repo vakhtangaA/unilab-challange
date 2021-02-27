@@ -15,12 +15,32 @@
   </head>
   <body>
     <header>
-      <nav class="filterNav">
-        <i class="fas fa-arrow-left"></i>
+      <nav class="filterNav desktop_hidden">
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
         <img src="./images/filter.png" class="filter" alt="filter" />
       </nav>
+      <nav class="mobile_hidden">
+        <i class="fas fa-bars desktop_hidden"></i>
+        <ul class="mobile_hidden nav_list">
+          <a href=""><li>Home</li></a>
+          <li>Discovery</li>
+          <li>Photos</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <span class="mobile_hidden">Logo</span>
+      <img src="./images/avatar.png" alt="avatar" class="mobile_hidden" />
     </header>
     <main class="newsMain">
+      <div class="mobile_hidden story">
+        <div>
+          <i class="fas fa-home"></i>
+          <p>
+            <span><a href="">Story </a> / </span><a href=""> World News</a>
+          </p>
+        </div>
+        <img src="./images/filter.png" alt="filter icon" />
+      </div>
       <div class="background_mountain backImg">
         <h1>World news</h1>
         <div class="empty"></div>
@@ -29,7 +49,7 @@
         </p>
         <img src="./images/avatar (man).png" alt="man avatar" class="avatar" />
       </div>
-      <form>
+      <form id="form">
         <label for="date"><b>Select a date</b></label>
         <select
           class="input"
@@ -51,22 +71,35 @@
       <article class="article">
         <hr class="line" />
         <img src="./images/avatar (man).png" alt="man avatar" class="avatar" />
-        <h2>Phasellus ipsum dolor sit amet</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos atque
-          expedita unde consequatur dolorem debitis reiciendis animi, quae
-          fugiat quia vel voluptatibus beatae ducimus exercitationem ipsa neque
-          eligendi inventore! Ducimus, doloribus quis totam beatae atque ad
-          repellat deserunt fugit autem minus facilis
-        </p>
-        <p>
-          delectus possimus aut iusto commodi. epellat deserunt fugit autem
-          minus facilis laudantium in velit, delectus possimus aut iusto
-          commodi.
-        </p>
-        <i class="far fa-clock"> 2m ago</i>
+        <h2 class="smallH2">Phasellus ipsum dolor sit</h2>
+        <div class="paragraphClass">
+          <div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
+              atque expedita unde consequatur dolorem debitis reiciendis animi,
+              quae fugiat quia vel voluptatibus beatae ducimus exercitationem
+              ipsa neque eligendi inventore! Ducimus, doloribus quis totam
+              beatae atque ad repellat deserunt fugit autem minus facilis
+            </p>
+          </div>
+          <div>
+            <p>
+              delectus possimus aut iusto commodi. epellat deserunt fugit autem
+              minus facilis laudantium in velit, delectus possimus aut iusto
+              commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Facere numquam eveniet dolore neque nisi quasi. Lorem ipsum dolor
+              sit amet.
+            </p>
+            <i class="far fa-clock"> 2m ago</i>
+          </div>
+        </div>
+
         <hr class="line" />
-        <img src="./images/happening/elephant.png" alt="An elephant" />
+        <img
+          src="./images/happening/elephant.png"
+          class="elephantImg"
+          alt="An elephant"
+        />
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
           magnam quos eveniet ut rerum dignissimos nam maxime culpa totam
@@ -76,16 +109,27 @@
           pariatur dolorem natus reiciendis excepturi. Ipsum officia recusandae
           laborum officiis assumenda! Fugiat eius rem quisquam facilis quam nam
           similique laudantium, adipisci expedita veritatis omnis delectus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+          deserunt consequuntur? Laudantium praesentium pariatur et temporibus
+          voluptas harum ex qui, neque odio? Aspernatur recusandae quod
+          doloremque iusto vel inventore quidem.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel maiores
+          dolores ea doloribus cumque dolor animi doloremque, in quia at! Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+          quos!
         </p>
         <p class="conclusion">
           <em>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident,
-            expedita.
+            expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Labore animi, minus velit eligendi ab laudantium?
           </em>
         </p>
         <hr class="line" />
       </article>
-      <footer id="footer">
+      <div id="footer">
         <nav>
           <ul class="footerUl">
             <li>01</li>
@@ -96,6 +140,50 @@
             <li><b>...</b></li>
           </ul>
         </nav>
+      </div>
+      <footer class="mobile_hidden dskt_footer">
+        <div class="topFooter">
+          <span>Logo</span>
+          <nav class="bigNav">
+            <ul>
+              <li>Home</li>
+              <li>Discovery</li>
+              <li>Photos</li>
+              <li>Contact</li>
+            </ul>
+            <ul>
+              <li>About</li>
+              <li>Help</li>
+              <li>Terms</li>
+              <li>Guidelines</li>
+            </ul>
+            <ul>
+              <li>Testimonials</li>
+              <li>Advertise</li>
+              <li>Integrations</li>
+              <li>Careers</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="bottomFooter">
+          <div>
+            <input
+              type="email"
+              id="email"
+              class="footer_input"
+              placeholder="Email"
+            />
+            <label for="email"
+              >Stay in touch with us for the freshest products!</label
+            >
+          </div>
+          <div>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fas fa-globe-europe"></i>
+          </div>
+        </div>
       </footer>
     </main>
   </body>

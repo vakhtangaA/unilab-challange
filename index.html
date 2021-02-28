@@ -15,10 +15,10 @@
     <title>Unilab</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <i class="fas fa-bars desktop_hidden"></i>
-        <ul class="mobile_hidden nav_list">
+    <header class="bigHeader" id="hiddenNav">
+      <nav id="overlay">
+        <i class="fas fa-bars desktop_hidden" onclick="openNav()" id="navBurger"></i>
+        <ul class="mobile_hidden nav_list" id="navUl">
           <a href=""><li>Home</li></a>
           <li>Discovery</li>
           <li>Photos</li>
@@ -28,7 +28,18 @@
       <span>Logo</span>
       <img src="./images/avatar.png" alt="avatar" />
     </header>
-    <main class="main">
+    <div id="shownNav" id="shownNav" style="display: none;">
+      <span>Logo</span>
+      <ul>
+        <a href="index.html" onclick="closeNav()"><li><i class="fas fa-home"></i>Home</li></a>
+        <li><i class="fas fa-compass"></i> Discovery</li>
+        <li><i class="far fa-image"></i>Images</li>
+        <li><i class="fas fa-envelope-open-text"></i>Contact</li>
+        <li><img src="./images/avatar.png" alt="avatar"><span class="imageSpan">Profile</span> </li>
+      </ul>
+    </div>
+    <main class="main" id="main">
+      <div class="flexWithBigScreen">
       <div class="main_news">
         <h2>World news</h2>
         <h3>Amazing places in America to visit</h3>
@@ -68,6 +79,7 @@
             <i class="far fa-clock"> 1h ago</i>
           </div>
         </div>
+      </div>
       </section>
       <section class="trending_section">
         <div class="section_header">
@@ -104,6 +116,16 @@
               <i class="far fa-clock"> 1h ago</i>
             </div>
           </div>
+          <div class="article_header hideBelowDesktop">
+            <img src="./images/desktop/skiing.png" alt="Orange umbrellas" />
+            <div class="article_descriptor">
+              <h3>Morbi eleifend a libero</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia,
+                labore?
+              </p>
+              <i class="far fa-clock"> 1h ago</i>
+            </div>
         </div>
       </section>
       <section class="happening_section">
@@ -157,20 +179,45 @@
             <i class="far fa-clock"> 4h ago by</i
             ><a class="image_author" href="">Days</a>
           </div>
-        </div>
-        <div class="desktop_hidden small_title">
-          <img src="./images/happening/road.png" alt="Road" />
-          <h3>Small title</h3>
-          <i class="far fa-clock"> 3h ago by</i
-          ><a class="image_author" href="">Monica</a>
+          <div class="desktop_hidden small_title">
+            <img src="./images/happening/road.png" alt="Road" />
+            <h3>Small title</h3>
+            <i class="far fa-clock"> 3h ago by</i
+            ><a class="image_author" href="">Monica</a>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="mobile_hidden dskt_footer">
+    <div id="overlayFooter" class="overlayFooter" style="display: none;">
+      <nav style="display: flex;">
+        <ul>
+          <a href=""><li>About</li><a>
+          <li>Help</li>
+          <li>Terms</li>
+          <li>Guidelines</li>
+        </ul>
+        <ul>
+          <li>Testimonials</li>
+          <li>Advertise</li>
+          <li>Integrations</li>
+          <li>Careers</li>
+        </ul>
+      </nav>
+      <div>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fas fa-globe-europe"></i>
+      </div>
+    </div>
+    <div class="linearGradient" id="linearGradient" style="display: none;">
+        
+    </div>
+    <footer class="mobile_hidden dskt_footer" id="hidedFooter">
       <div class="topFooter">
-        <span>Logo</span>
+        <span id="hidedLogo">Logo</span>
         <nav class="bigNav">
-          <ul>
+          <ul id="hidedOnOverlay">
             <a href=""><li>Home</li></a>
             <li>Discovery</li>
             <li>Photos</li>
@@ -198,6 +245,7 @@
             class="footer_input"
             placeholder="Email"
           />
+          <i class="fas fa-paper-plane"></i>
           <label for="email"
             >Stay in touch with us for the freshest products!</label
           >
@@ -210,5 +258,6 @@
         </div>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

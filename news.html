@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>World News</title>
   </head>
-  <body>
+  <body class="news_body">
     <header>
       <nav class="filterNav desktop_hidden">
         <a href="index.html"><i class="fas fa-arrow-left"></i></a>
@@ -22,7 +22,7 @@
       <nav class="mobile_hidden">
         <i class="fas fa-bars desktop_hidden"></i>
         <ul class="mobile_hidden nav_list">
-          <a href=""><li>Home</li></a>
+          <a href="index.html"><li>Home</li></a>
           <li>Discovery</li>
           <li>Photos</li>
           <li>Contact</li>
@@ -41,34 +41,40 @@
         </div>
         <img src="./images/filter.png" alt="filter icon" />
       </div>
-      <div class="background_mountain backImg">
-        <h1>World news</h1>
-        <div class="empty"></div>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipi elit. Excepturi, quo.
-        </p>
-        <img src="./images/avatar (man).png" alt="man avatar" class="avatar" />
+      <div class="newsFlex" id="force_padding">
+        <div class="background_mountain backImg">
+          <h1>World news</h1>
+          <div class="empty"></div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipi elit. Excepturi, quo.
+          </p>
+          <img
+            src="./images/avatar (man).png"
+            alt="man avatar"
+            class="avatar"
+          />
+        </div>
+        <form id="form">
+          <label for="date"><b>Select a date</b></label>
+          <select
+            class="input"
+            id="date"
+            name="datelist"
+            form="dateform"
+            required
+          >
+            <option value="" disabled selected>select</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+          </select>
+          <label for="keywords"><b>Enter the first keywords</b></label>
+          <input type="text" id="keywords" class="input" />
+          <button class="btn">Search</button>
+        </form>
       </div>
-      <form id="form">
-        <label for="date"><b>Select a date</b></label>
-        <select
-          class="input"
-          id="date"
-          name="datelist"
-          form="dateform"
-          required
-        >
-          <option value="" disabled selected>select</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
-          <option value="2019">2019</option>
-          <option value="2020">2020</option>
-        </select>
-        <label for="keywords"><b>Enter the first keywords</b></label>
-        <input type="text" id="keywords" class="input" />
-        <button class="btn">Search</button>
-      </form>
-      <article class="article">
+      <article class="article elephant_article">
         <hr class="line" />
         <img src="./images/avatar (man).png" alt="man avatar" class="avatar" />
         <h2 class="smallH2">Phasellus ipsum dolor sit</h2>
@@ -95,11 +101,23 @@
         </div>
 
         <hr class="line" />
-        <img
-          src="./images/happening/elephant.png"
-          class="elephantImg"
-          alt="An elephant"
-        />
+        <!-- ========================== -->
+
+        <picture>
+          <source
+            media="(max-width:700px)"
+            srcset="./images/happening/elephant.png"
+          />
+          <source
+            srcset="./images/desktop/elephant.png"
+            media="(min-width:700px)"
+          />
+          <img
+            src="./images/happening/elephant.png"
+            alt="Elephant"
+            style="width: auto"
+          />
+        </picture>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
           magnam quos eveniet ut rerum dignissimos nam maxime culpa totam
@@ -173,6 +191,7 @@
               class="footer_input"
               placeholder="Email"
             />
+            <i class="fas fa-paper-plane"></i>
             <label for="email"
               >Stay in touch with us for the freshest products!</label
             >

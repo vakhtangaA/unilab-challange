@@ -999,6 +999,10 @@ label {
   /* ===(-|-)==(-|-)==== */
 } 
 
+.newsFlex .background_mountain h1 {
+  line-height: 2.2rem;
+}
+
 
 /* overlay  */
 
@@ -1115,5 +1119,37 @@ label {
 @media (max-width: 720px) {
   .topics_section {
     padding: 0 2rem !important;
+  }
+}
+
+
+@media (min-width: 1176px) {
+  .main > *:not(:first-child){
+    padding: 0 8rem !important;
+  }
+  .trending_section .arrows {
+    position: relative;
+    left: 5rem;
+  }
+
+  .happening_section .arrows {
+    position: relative;
+    right: 2rem;
+  }
+
+  .main .section_header {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1040px) {
+  .trending_section .arrows {
+    position: relative;
+    left: 1rem;
+  }
+
+  .happening_section .arrows {
+    position: relative;
+    right: 2rem;
   }
 }
